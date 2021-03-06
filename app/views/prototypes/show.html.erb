@@ -47,13 +47,13 @@
         <%# // ログインしているユーザーには上記を表示する %>
         <ul class="comments_lists">
           <%# 投稿に紐づくコメントを一覧する処理を記述する %>
-            <ui class="comments_list">
+            <ul class="comments_list">
                <% @comments.each do |comment| %><li>
                  <%= link_to comment.user.name, user_path(current_user), class: :comment_user %>
                  <%= comment.text %>
                </li>
                <% end %>
-            </ui>
+            </ul>
 
           <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
         </ul>
